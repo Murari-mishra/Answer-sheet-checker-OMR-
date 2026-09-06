@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+
+# Python test/cache
+.pytest_cache/
+.mypy_cache/
+
+# Node
+node_modules/
+.nuxt/
+.output/
+dist/
+
+# Logs
+*.log
+
+# Uploaded/generated files
+uploads/
+output/
+
+# OMR dataset/archive
+*.zip
