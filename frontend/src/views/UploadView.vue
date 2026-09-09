@@ -80,9 +80,9 @@ function onReviewRequested(row: UploadRow) {
   reviewingRow.value = row
 }
 
-async function onReviewSubmit(confirmedAnswers: Record<string, string>) {
+async function onReviewSubmit(payload: { confirmedAnswers: Record<string, string>; studentIdentifier?: string }) {
   if (reviewingRow.value) {
-    await store.submitReview(reviewingRow.value, confirmedAnswers)
+    await store.submitReview(reviewingRow.value, payload.confirmedAnswers, payload.studentIdentifier)
   }
   reviewingRow.value = null
 }

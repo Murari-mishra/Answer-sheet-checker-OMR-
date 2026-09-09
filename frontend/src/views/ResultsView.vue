@@ -42,9 +42,9 @@ function openReview(item: BatchItem) {
   reviewingItem.value = item
 }
 
-async function onReviewSubmit(confirmedAnswers: Record<string, string>) {
+async function onReviewSubmit(payload: { confirmedAnswers: Record<string, string>; studentIdentifier?: string }) {
   if (reviewingItem.value) {
-    await batchesApi.review(batchId, reviewingItem.value.id, confirmedAnswers)
+    await batchesApi.review(batchId, reviewingItem.value.id, payload.confirmedAnswers, payload.studentIdentifier)
   }
   reviewingItem.value = null
   await refresh()

@@ -12,9 +12,15 @@ export const batchesApi = {
   listItems: (batchId: number) => apiClient.get<BatchItem[]>(`/batches/${batchId}/items`),
   getItem: (batchId: number, itemId: number) =>
     apiClient.get<BatchItem>(`/batches/${batchId}/items/${itemId}`),
-  review: (batchId: number, itemId: number, confirmedAnswers: Record<string, string>) =>
+  review: (
+    batchId: number,
+    itemId: number,
+    confirmedAnswers: Record<string, string>,
+    studentIdentifier?: string,
+  ) =>
     apiClient.post<BatchItem>(`/batches/${batchId}/items/${itemId}/review`, {
       confirmed_answers: confirmedAnswers,
+      ...(studentIdentifier === undefined ? {} : { student_identifier: studentIdentifier }),
     }),
   resultsCsvUrl: (batchId: number) => `${BASE_URL}/batches/${batchId}/results.csv`,
 }

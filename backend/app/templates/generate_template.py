@@ -1,3 +1,29 @@
+"""
+Generates template_ambition_guru_v1.json by calibrating directly against a
+real sample sheet. Marker-detect + warp the sample, then measure real
+bubble row/column positions with Hough circle detection.
+
+IMPORTANT: this file must always MEASURE geometry from a real image, never
+hardcode guessed pixel coordinates. A hardcoded-coordinate version was
+tried once and produced a ~33px row spacing when the real measured
+spacing is ~26.5px - close enough to look plausible in a spot check, but
+compounding to a 50+ px error by the last row, causing wrong reads on
+several digits/questions. If you're editing this file, keep every bubble
+position derived from actual circle detection on the sample image.
+
+Main grid: outlier clusters get dropped, genuinely missing detections
+get interpolated, based on actual gap sizes relative to the real
+measured row spacing (resolve_rows()).
+
+Roll number grid (5 digit columns x 10 rows): a raw count of exactly 10
+detections is NOT sufficient evidence a column is clean - noise at the
+top of the region can coincidentally cancel out a missing real row in
+the middle, silently preserving the count while corrupting a row's
+position. Instead of trusting the count, we require a column to be
+*internally self-consistent* (evenly spaced, no gap much bigger than
+the smallest gap) before trusting it, and use the first such column
+found rather than blindly averaging.
+"""
 import json
 import sys
 from pathlib import Path
@@ -6,7 +32,7 @@ import cv2
 import numpy as np
 from sklearn.cluster import KMeans
 
-SAMPLE_SHEET_PATH = "/home/murari/snap/viber/1/Downloads/omr/omr/Page0001.jpg"
+SAMPLE_SHEET_PATH = "/home/murari/orm-sheet/omr/Page0001.jpg"
 
 CANONICAL_WIDTH = 1700
 CANONICAL_HEIGHT = 2350
@@ -124,6 +150,17 @@ def resolve_rows(centers, n_expected=50):
     return fixed
 
 
+def is_self_consistent(ys, n_expected=10, tolerance=1.4):
+    """True if ys has exactly n_expected points, evenly spaced (no gap more
+    than `tolerance`x the smallest gap). A count match alone is NOT enough -
+    noise can cancel out a missing real row while preserving the count."""
+    if len(ys) != n_expected:
+        return False
+    ys = sorted(ys)
+    gaps = [ys[i + 1] - ys[i] for i in range(len(ys) - 1)]
+    return max(gaps) <= min(gaps) * tolerance
+
+
 def build_roll_number_section(warped):
     gray = cv2.cvtColor(warped, cv2.COLOR_BGR2GRAY)
     roi = gray[280:660, 0:400]
@@ -151,8 +188,19 @@ def build_roll_number_section(warped):
         if best_dist < 10:
             col_ys[best_col].append(float(cy))
 
-    resolved_cols = [resolve_rows(ys, n_expected=10) for ys in col_ys]
-    row_y = [sum(vals) / len(vals) for vals in zip(*resolved_cols)]
+    row_y = None
+    for ci, ys in enumerate(col_ys):
+        if is_self_consistent(ys):
+            row_y = sorted(ys)
+            print(f"roll number rows: using column {ci} (self-consistent, {len(ys)} clean detections, "
+                  f"spacing {row_y[1]-row_y[0]:.1f}-{row_y[-1]-row_y[-2]:.1f}px)")
+            break
+
+    if row_y is None:
+        raise SystemExit(
+            "No roll-number column was self-consistent enough to trust - "
+            "raw per-column detections: " + str([sorted(ys) for ys in col_ys])
+        )
 
     bubbles = []
     for col_idx, x in enumerate(col_x):

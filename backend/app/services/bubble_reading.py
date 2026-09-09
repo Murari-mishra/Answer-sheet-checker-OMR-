@@ -90,6 +90,13 @@ def read_roll_number(warped_bgr: np.ndarray, template: dict) -> dict | None:
     Reads the roll-number bubble grid, if the template defines one.
     A digit column is structurally identical to a question with 10 options
     instead of 4, so classify_question() is reused as-is with digit labels.
+
+    IMPORTANT: coordinates come from template["roll_number"]["bubbles"]
+    (calibrated per-sheet by generate_template.py), exactly the same way
+    read_sheet() reads the main grid from template["bubbles"]. Never
+    hardcode pixel coordinates here - the template file is the single
+    source of truth for geometry.
+
     Returns {"roll_number": str, "uncertain": bool, "diagnostics": [...]}
     or None if this template has no roll_number section.
     """

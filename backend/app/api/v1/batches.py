@@ -204,6 +204,14 @@ def review_item(batch_id: int, item_id: int, payload: ReviewSubmit, db: Session 
     was_review = item.status == "needs_review"
 
     item.confirmed_answers = payload.confirmed_answers
+    if payload.student_identifier is not None:
+        roll_number = payload.student_identifier.strip()
+        if len(roll_number) != 5 or not roll_number.isdigit():
+            raise HTTPException(
+                status_code=422,
+                detail="student_identifier must contain exactly 5 digits",
+            )
+        item.student_identifier = roll_number
     item.score = score_answers(payload.confirmed_answers, exam.answer_key, exam.scoring_policy)
     item.status = "completed"
 

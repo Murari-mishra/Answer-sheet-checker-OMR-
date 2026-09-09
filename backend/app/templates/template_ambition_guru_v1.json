@@ -5629,42 +5629,42 @@
         "digit_position": 0,
         "digit_value": 0,
         "x": 0.06224,
-        "y": 0.14809,
+        "y": 0.16702,
         "radius": 0.00647
       },
       {
         "digit_position": 0,
         "digit_value": 1,
         "x": 0.06224,
-        "y": 0.16447,
+        "y": 0.17851,
         "radius": 0.00647
       },
       {
         "digit_position": 0,
         "digit_value": 2,
         "x": 0.06224,
-        "y": 0.1783,
+        "y": 0.18957,
         "radius": 0.00647
       },
       {
         "digit_position": 0,
         "digit_value": 3,
         "x": 0.06224,
-        "y": 0.18936,
+        "y": 0.20064,
         "radius": 0.00647
       },
       {
         "digit_position": 0,
         "digit_value": 4,
         "x": 0.06224,
-        "y": 0.20638,
+        "y": 0.21213,
         "radius": 0.00647
       },
       {
         "digit_position": 0,
         "digit_value": 5,
         "x": 0.06224,
-        "y": 0.21787,
+        "y": 0.22362,
         "radius": 0.00647
       },
       {
@@ -5692,49 +5692,49 @@
         "digit_position": 0,
         "digit_value": 9,
         "x": 0.06224,
-        "y": 0.26851,
+        "y": 0.2683,
         "radius": 0.00647
       },
       {
         "digit_position": 1,
         "digit_value": 0,
         "x": 0.09078,
-        "y": 0.14809,
+        "y": 0.16702,
         "radius": 0.00647
       },
       {
         "digit_position": 1,
         "digit_value": 1,
         "x": 0.09078,
-        "y": 0.16447,
+        "y": 0.17851,
         "radius": 0.00647
       },
       {
         "digit_position": 1,
         "digit_value": 2,
         "x": 0.09078,
-        "y": 0.1783,
+        "y": 0.18957,
         "radius": 0.00647
       },
       {
         "digit_position": 1,
         "digit_value": 3,
         "x": 0.09078,
-        "y": 0.18936,
+        "y": 0.20064,
         "radius": 0.00647
       },
       {
         "digit_position": 1,
         "digit_value": 4,
         "x": 0.09078,
-        "y": 0.20638,
+        "y": 0.21213,
         "radius": 0.00647
       },
       {
         "digit_position": 1,
         "digit_value": 5,
         "x": 0.09078,
-        "y": 0.21787,
+        "y": 0.22362,
         "radius": 0.00647
       },
       {
@@ -5762,49 +5762,49 @@
         "digit_position": 1,
         "digit_value": 9,
         "x": 0.09078,
-        "y": 0.26851,
+        "y": 0.2683,
         "radius": 0.00647
       },
       {
         "digit_position": 2,
         "digit_value": 0,
         "x": 0.1224,
-        "y": 0.14809,
+        "y": 0.16702,
         "radius": 0.00647
       },
       {
         "digit_position": 2,
         "digit_value": 1,
         "x": 0.1224,
-        "y": 0.16447,
+        "y": 0.17851,
         "radius": 0.00647
       },
       {
         "digit_position": 2,
         "digit_value": 2,
         "x": 0.1224,
-        "y": 0.1783,
+        "y": 0.18957,
         "radius": 0.00647
       },
       {
         "digit_position": 2,
         "digit_value": 3,
         "x": 0.1224,
-        "y": 0.18936,
+        "y": 0.20064,
         "radius": 0.00647
       },
       {
         "digit_position": 2,
         "digit_value": 4,
         "x": 0.1224,
-        "y": 0.20638,
+        "y": 0.21213,
         "radius": 0.00647
       },
       {
         "digit_position": 2,
         "digit_value": 5,
         "x": 0.1224,
-        "y": 0.21787,
+        "y": 0.22362,
         "radius": 0.00647
       },
       {
@@ -5832,49 +5832,49 @@
         "digit_position": 2,
         "digit_value": 9,
         "x": 0.1224,
-        "y": 0.26851,
+        "y": 0.2683,
         "radius": 0.00647
       },
       {
         "digit_position": 3,
         "digit_value": 0,
         "x": 0.15124,
-        "y": 0.14809,
+        "y": 0.16702,
         "radius": 0.00647
       },
       {
         "digit_position": 3,
         "digit_value": 1,
         "x": 0.15124,
-        "y": 0.16447,
+        "y": 0.17851,
         "radius": 0.00647
       },
       {
         "digit_position": 3,
         "digit_value": 2,
         "x": 0.15124,
-        "y": 0.1783,
+        "y": 0.18957,
         "radius": 0.00647
       },
       {
         "digit_position": 3,
         "digit_value": 3,
         "x": 0.15124,
-        "y": 0.18936,
+        "y": 0.20064,
         "radius": 0.00647
       },
       {
         "digit_position": 3,
         "digit_value": 4,
         "x": 0.15124,
-        "y": 0.20638,
+        "y": 0.21213,
         "radius": 0.00647
       },
       {
         "digit_position": 3,
         "digit_value": 5,
         "x": 0.15124,
-        "y": 0.21787,
+        "y": 0.22362,
         "radius": 0.00647
       },
       {
@@ -5902,49 +5902,49 @@
         "digit_position": 3,
         "digit_value": 9,
         "x": 0.15124,
-        "y": 0.26851,
+        "y": 0.2683,
         "radius": 0.00647
       },
       {
         "digit_position": 4,
         "digit_value": 0,
         "x": 0.18076,
-        "y": 0.14809,
+        "y": 0.16702,
         "radius": 0.00647
       },
       {
         "digit_position": 4,
         "digit_value": 1,
         "x": 0.18076,
-        "y": 0.16447,
+        "y": 0.17851,
         "radius": 0.00647
       },
       {
         "digit_position": 4,
         "digit_value": 2,
         "x": 0.18076,
-        "y": 0.1783,
+        "y": 0.18957,
         "radius": 0.00647
       },
       {
         "digit_position": 4,
         "digit_value": 3,
         "x": 0.18076,
-        "y": 0.18936,
+        "y": 0.20064,
         "radius": 0.00647
       },
       {
         "digit_position": 4,
         "digit_value": 4,
         "x": 0.18076,
-        "y": 0.20638,
+        "y": 0.21213,
         "radius": 0.00647
       },
       {
         "digit_position": 4,
         "digit_value": 5,
         "x": 0.18076,
-        "y": 0.21787,
+        "y": 0.22362,
         "radius": 0.00647
       },
       {
@@ -5972,7 +5972,7 @@
         "digit_position": 4,
         "digit_value": 9,
         "x": 0.18076,
-        "y": 0.26851,
+        "y": 0.2683,
         "radius": 0.00647
       }
     ]

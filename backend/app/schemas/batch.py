@@ -27,6 +27,7 @@ class ManualItemCreate(BaseModel):
 
 class ReviewSubmit(BaseModel):
     confirmed_answers: dict[str, str]
+    student_identifier: str | None = None
 
 
 class BatchItemOut(BaseModel):

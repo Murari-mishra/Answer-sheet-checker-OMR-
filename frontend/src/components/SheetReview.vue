@@ -4,11 +4,12 @@ import type { BatchItem } from '@/types/omr'
 
 const props = defineProps<{ item: BatchItem; label?: string }>()
 const emit = defineEmits<{
-  submit: [confirmedAnswers: Record<string, string>]
+  submit: [payload: { confirmedAnswers: Record<string, string>; studentIdentifier?: string }]
   close: []
 }>()
 
 const editedAnswers = ref<Record<string, string>>({ ...(props.item.raw_answers ?? {}) })
+const editedStudentIdentifier = ref(props.item.student_identifier ?? '')
 
 const questionNumbers = computed(() =>
   Object.keys(editedAnswers.value)
@@ -18,11 +19,17 @@ const questionNumbers = computed(() =>
 
 function needsAttention(q: number): boolean {
   const val = editedAnswers.value[String(q)]
-  return val === '' || val.includes(',')
+  return val === undefined || val === '' || val.includes(',')
 }
 
 function submit() {
-  emit('submit', editedAnswers.value)
+  const studentIdentifier = editedStudentIdentifier.value.trim()
+  emit('submit', {
+    confirmedAnswers: editedAnswers.value,
+    // An uncertain value such as "925??" is left unchanged. A corrected
+    // value is sent to the backend and validated there.
+    studentIdentifier: /^\d{5}$/.test(studentIdentifier) ? studentIdentifier : undefined,
+  })
 }
 </script>
 
@@ -34,6 +41,17 @@ function submit() {
         Highlighted questions were blank or had multiple marks detected. Correct any answer below,
         then confirm.
       </p>
+
+      <label class="roll-number" for="student-identifier">Roll number</label>
+      <input
+        id="student-identifier"
+        v-model="editedStudentIdentifier"
+        class="roll-number__input"
+        inputmode="numeric"
+        maxlength="5"
+        pattern="[0-9]{5}"
+        placeholder="5 digits"
+      />
 
       <div class="answer-grid">
         <div
@@ -82,6 +100,17 @@ function submit() {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   gap: 6px;
+}
+.roll-number {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.roll-number__input {
+  width: 90px;
+  margin-bottom: 16px;
+  padding: 4px;
+  text-align: center;
 }
 .answer-cell {
   display: flex;

@@ -129,9 +129,18 @@ export const useOmrStore = defineStore('omr', () => {
     }
   }
 
-  async function submitReview(row: UploadRow, confirmedAnswers: Record<string, string>) {
+  async function submitReview(
+    row: UploadRow,
+    confirmedAnswers: Record<string, string>,
+    studentIdentifier?: string,
+  ) {
     if (!currentBatch.value || row.itemId === null) return
-    const updated = await batchesApi.review(currentBatch.value.id, row.itemId, confirmedAnswers)
+    const updated = await batchesApi.review(
+      currentBatch.value.id,
+      row.itemId,
+      confirmedAnswers,
+      studentIdentifier,
+    )
     row.item = updated
     currentBatch.value = await batchesApi.get(currentBatch.value.id)
   }
