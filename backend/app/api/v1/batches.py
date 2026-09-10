@@ -95,9 +95,6 @@ def submit_manual_item(batch_id: int, payload: ManualItemCreate, db: Session = D
 
 @router.post("/batches/{batch_id}/items", response_model=BatchItemOut, status_code=status.HTTP_202_ACCEPTED)
 async def upload_sheet_item(batch_id: int, file: UploadFile = File(...), db: Session = Depends(get_db)):
-    """Returns immediately. Only cheap checks happen here - content-type/size
-    and storing the file. Decode, alignment, bubble reading, and scoring
-    happen in the background worker."""
     batch = get_batch_or_404(batch_id, db)
 
     raw_bytes = await file.read()
@@ -147,8 +144,6 @@ async def upload_sheet_item(batch_id: int, file: UploadFile = File(...), db: Ses
 async def retry_item(
     batch_id: int, item_id: int, file: UploadFile = File(...), db: Session = Depends(get_db)
 ):
-    """Retry a failed item, replacing the input image (reprocessing the exact
-    same bytes that already failed would just fail again identically)."""
     get_batch_or_404(batch_id, db)
     item = get_item_or_404(batch_id, item_id, db)
 

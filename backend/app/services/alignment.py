@@ -17,7 +17,7 @@ class AlignmentError(Exception):
 def load_template(template_version: str) -> dict:
     path = TEMPLATE_DIR / f"template_{template_version.replace('-', '_')}.json"
     if not path.exists():
-        # fall back to direct filename match, e.g. "ambition-guru-v1" -> template_ambition_guru_v1.json
+        # fall back to direct filename match, e.g." -> 
         path = TEMPLATE_DIR / "template_ambition_guru_v1.json"
     with open(path) as f:
         return json.load(f)
