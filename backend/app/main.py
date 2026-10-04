@@ -5,12 +5,15 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.api.v1 import batches, exams
+from app.db.base import Base
+from app.db.session import engine
 from app.services.jobs import requeue_stale_items, worker_loop
 from app.services.storage import ensure_bucket_exists
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
+    Base.metadata.create_all(bind=engine)
     ensure_bucket_exists()
     worker_task = asyncio.create_task(worker_loop())
     await requeue_stale_items()

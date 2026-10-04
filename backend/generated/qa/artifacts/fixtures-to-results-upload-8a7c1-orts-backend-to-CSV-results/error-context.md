@@ -1,0 +1,382 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - 'heading "Batch #7 Results" [level=2] [ref=e4]'
+  - generic [ref=e5]:
+    - generic [ref=e6]: 32 total
+    - generic [ref=e7]: 10 completed
+    - generic [ref=e8]: 30 needs review
+    - generic [ref=e9]: 1 failed
+  - table [ref=e10]:
+    - rowgroup [ref=e11]:
+      - row "Item Student Status Score Attempt Error" [ref=e12]:
+        - cell "Item" [ref=e13]
+        - cell "Student" [ref=e14]
+        - cell "Status" [ref=e15]
+        - cell "Score" [ref=e16]
+        - cell "Attempt" [ref=e17]
+        - cell "Error" [ref=e18]
+        - cell [ref=e19]
+    - rowgroup [ref=e20]:
+      - row "#247 905?4 needs_review — 1 Review" [ref=e21]:
+        - cell "#247" [ref=e22]
+        - cell "905?4" [ref=e23]
+        - cell "needs_review" [ref=e24]
+        - cell "—" [ref=e25]
+        - cell "1" [ref=e26]
+        - cell [ref=e27]
+        - cell "Review" [ref=e28]:
+          - button "Review" [ref=e29] [cursor=pointer]
+      - row "#248 91559 completed 35 1" [ref=e30]:
+        - cell "#248" [ref=e31]
+        - cell "91559" [ref=e32]
+        - cell "completed" [ref=e33]
+        - cell "35" [ref=e34]
+        - cell "1" [ref=e35]
+        - cell [ref=e36]
+        - cell [ref=e37]
+      - row "#249 90725 completed 42 1" [ref=e38]:
+        - cell "#249" [ref=e39]
+        - cell "90725" [ref=e40]
+        - cell "completed" [ref=e41]
+        - cell "42" [ref=e42]
+        - cell "1" [ref=e43]
+        - cell [ref=e44]
+        - cell [ref=e45]
+      - row "#250 90933 needs_review — 1 Review" [ref=e46]:
+        - cell "#250" [ref=e47]
+        - cell "90933" [ref=e48]
+        - cell "needs_review" [ref=e49]
+        - cell "—" [ref=e50]
+        - cell "1" [ref=e51]
+        - cell [ref=e52]
+        - cell "Review" [ref=e53]:
+          - button "Review" [ref=e54] [cursor=pointer]
+      - row "#251 91409 needs_review — 1 Review" [ref=e55]:
+        - cell "#251" [ref=e56]
+        - cell "91409" [ref=e57]
+        - cell "needs_review" [ref=e58]
+        - cell "—" [ref=e59]
+        - cell "1" [ref=e60]
+        - cell [ref=e61]
+        - cell "Review" [ref=e62]:
+          - button "Review" [ref=e63] [cursor=pointer]
+      - row "#252 90080 completed 38 1" [ref=e64]:
+        - cell "#252" [ref=e65]
+        - cell "90080" [ref=e66]
+        - cell "completed" [ref=e67]
+        - cell "38" [ref=e68]
+        - cell "1" [ref=e69]
+        - cell [ref=e70]
+        - cell [ref=e71]
+      - row "#253 — failed — 1 Expected 4 registration markers, found 3" [ref=e72]:
+        - cell "#253" [ref=e73]
+        - cell "—" [ref=e74]
+        - cell "failed" [ref=e75]
+        - cell "—" [ref=e76]
+        - cell "1" [ref=e77]
+        - cell "Expected 4 registration markers, found 3" [ref=e78]
+        - cell [ref=e79]
+      - row "#254 90370 needs_review — 1 Review" [ref=e80]:
+        - cell "#254" [ref=e81]
+        - cell "90370" [ref=e82]
+        - cell "needs_review" [ref=e83]
+        - cell "—" [ref=e84]
+        - cell "1" [ref=e85]
+        - cell [ref=e86]
+        - cell "Review" [ref=e87]:
+          - button "Review" [ref=e88] [cursor=pointer]
+      - row "#255 91505 needs_review — 1 Review" [ref=e89]:
+        - cell "#255" [ref=e90]
+        - cell "91505" [ref=e91]
+        - cell "needs_review" [ref=e92]
+        - cell "—" [ref=e93]
+        - cell "1" [ref=e94]
+        - cell [ref=e95]
+        - cell "Review" [ref=e96]:
+          - button "Review" [ref=e97] [cursor=pointer]
+      - row "#256 90163 needs_review — 1 Review" [ref=e98]:
+        - cell "#256" [ref=e99]
+        - cell "90163" [ref=e100]
+        - cell "needs_review" [ref=e101]
+        - cell "—" [ref=e102]
+        - cell "1" [ref=e103]
+        - cell [ref=e104]
+        - cell "Review" [ref=e105]:
+          - button "Review" [ref=e106] [cursor=pointer]
+      - row "#257 91542 needs_review — 1 Review" [ref=e107]:
+        - cell "#257" [ref=e108]
+        - cell "91542" [ref=e109]
+        - cell "needs_review" [ref=e110]
+        - cell "—" [ref=e111]
+        - cell "1" [ref=e112]
+        - cell [ref=e113]
+        - cell "Review" [ref=e114]:
+          - button "Review" [ref=e115] [cursor=pointer]
+      - row "#258 91236 needs_review — 1 Review" [ref=e116]:
+        - cell "#258" [ref=e117]
+        - cell "91236" [ref=e118]
+        - cell "needs_review" [ref=e119]
+        - cell "—" [ref=e120]
+        - cell "1" [ref=e121]
+        - cell [ref=e122]
+        - cell "Review" [ref=e123]:
+          - button "Review" [ref=e124] [cursor=pointer]
+      - row "#259 90598 needs_review — 1 Review" [ref=e125]:
+        - cell "#259" [ref=e126]
+        - cell "90598" [ref=e127]
+        - cell "needs_review" [ref=e128]
+        - cell "—" [ref=e129]
+        - cell "1" [ref=e130]
+        - cell [ref=e131]
+        - cell "Review" [ref=e132]:
+          - button "Review" [ref=e133] [cursor=pointer]
+      - row "#260 91314 completed 35 1" [ref=e134]:
+        - cell "#260" [ref=e135]
+        - cell "91314" [ref=e136]
+        - cell "completed" [ref=e137]
+        - cell "35" [ref=e138]
+        - cell "1" [ref=e139]
+        - cell [ref=e140]
+        - cell [ref=e141]
+      - row "#261 91301 needs_review — 1 Review" [ref=e142]:
+        - cell "#261" [ref=e143]
+        - cell "91301" [ref=e144]
+        - cell "needs_review" [ref=e145]
+        - cell "—" [ref=e146]
+        - cell "1" [ref=e147]
+        - cell [ref=e148]
+        - cell "Review" [ref=e149]:
+          - button "Review" [ref=e150] [cursor=pointer]
+      - row "#262 90162 needs_review — 1 Review" [ref=e151]:
+        - cell "#262" [ref=e152]
+        - cell "90162" [ref=e153]
+        - cell "needs_review" [ref=e154]
+        - cell "—" [ref=e155]
+        - cell "1" [ref=e156]
+        - cell [ref=e157]
+        - cell "Review" [ref=e158]:
+          - button "Review" [ref=e159] [cursor=pointer]
+      - row "#263 90227 completed 55 1" [ref=e160]:
+        - cell "#263" [ref=e161]
+        - cell "90227" [ref=e162]
+        - cell "completed" [ref=e163]
+        - cell "55" [ref=e164]
+        - cell "1" [ref=e165]
+        - cell [ref=e166]
+        - cell [ref=e167]
+      - row "#264 91042 completed 56 1" [ref=e168]:
+        - cell "#264" [ref=e169]
+        - cell "91042" [ref=e170]
+        - cell "completed" [ref=e171]
+        - cell "56" [ref=e172]
+        - cell "1" [ref=e173]
+        - cell [ref=e174]
+        - cell [ref=e175]
+      - row "#265 90450 completed 39 1" [ref=e176]:
+        - cell "#265" [ref=e177]
+        - cell "90450" [ref=e178]
+        - cell "completed" [ref=e179]
+        - cell "39" [ref=e180]
+        - cell "1" [ref=e181]
+        - cell [ref=e182]
+        - cell [ref=e183]
+      - row "#266 90107 needs_review — 1 Review" [ref=e184]:
+        - cell "#266" [ref=e185]
+        - cell "90107" [ref=e186]
+        - cell "needs_review" [ref=e187]
+        - cell "—" [ref=e188]
+        - cell "1" [ref=e189]
+        - cell [ref=e190]
+        - cell "Review" [ref=e191]:
+          - button "Review" [ref=e192] [cursor=pointer]
+      - row "#267 90961 needs_review — 1 Review" [ref=e193]:
+        - cell "#267" [ref=e194]
+        - cell "90961" [ref=e195]
+        - cell "needs_review" [ref=e196]
+        - cell "—" [ref=e197]
+        - cell "1" [ref=e198]
+        - cell [ref=e199]
+        - cell "Review" [ref=e200]:
+          - button "Review" [ref=e201] [cursor=pointer]
+      - row "#268 90979 needs_review — 1 Review" [ref=e202]:
+        - cell "#268" [ref=e203]
+        - cell "90979" [ref=e204]
+        - cell "needs_review" [ref=e205]
+        - cell "—" [ref=e206]
+        - cell "1" [ref=e207]
+        - cell [ref=e208]
+        - cell "Review" [ref=e209]:
+          - button "Review" [ref=e210] [cursor=pointer]
+      - row "#269 90486 needs_review — 1 Review" [ref=e211]:
+        - cell "#269" [ref=e212]
+        - cell "90486" [ref=e213]
+        - cell "needs_review" [ref=e214]
+        - cell "—" [ref=e215]
+        - cell "1" [ref=e216]
+        - cell [ref=e217]
+        - cell "Review" [ref=e218]:
+          - button "Review" [ref=e219] [cursor=pointer]
+      - row "#270 90414 completed 54 1" [ref=e220]:
+        - cell "#270" [ref=e221]
+        - cell "90414" [ref=e222]
+        - cell "completed" [ref=e223]
+        - cell "54" [ref=e224]
+        - cell "1" [ref=e225]
+        - cell [ref=e226]
+        - cell [ref=e227]
+      - row "#271 91611 needs_review — 1 Review" [ref=e228]:
+        - cell "#271" [ref=e229]
+        - cell "91611" [ref=e230]
+        - cell "needs_review" [ref=e231]
+        - cell "—" [ref=e232]
+        - cell "1" [ref=e233]
+        - cell [ref=e234]
+        - cell "Review" [ref=e235]:
+          - button "Review" [ref=e236] [cursor=pointer]
+      - row "#272 91604 needs_review — 1 Review" [ref=e237]:
+        - cell "#272" [ref=e238]
+        - cell "91604" [ref=e239]
+        - cell "needs_review" [ref=e240]
+        - cell "—" [ref=e241]
+        - cell "1" [ref=e242]
+        - cell [ref=e243]
+        - cell "Review" [ref=e244]:
+          - button "Review" [ref=e245] [cursor=pointer]
+      - row "#273 90695 needs_review — 1 Review" [ref=e246]:
+        - cell "#273" [ref=e247]
+        - cell "90695" [ref=e248]
+        - cell "needs_review" [ref=e249]
+        - cell "—" [ref=e250]
+        - cell "1" [ref=e251]
+        - cell [ref=e252]
+        - cell "Review" [ref=e253]:
+          - button "Review" [ref=e254] [cursor=pointer]
+      - row "#274 90330 needs_review — 1 Review" [ref=e255]:
+        - cell "#274" [ref=e256]
+        - cell "90330" [ref=e257]
+        - cell "needs_review" [ref=e258]
+        - cell "—" [ref=e259]
+        - cell "1" [ref=e260]
+        - cell [ref=e261]
+        - cell "Review" [ref=e262]:
+          - button "Review" [ref=e263] [cursor=pointer]
+      - row "#275 90165 needs_review — 1 Review" [ref=e264]:
+        - cell "#275" [ref=e265]
+        - cell "90165" [ref=e266]
+        - cell "needs_review" [ref=e267]
+        - cell "—" [ref=e268]
+        - cell "1" [ref=e269]
+        - cell [ref=e270]
+        - cell "Review" [ref=e271]:
+          - button "Review" [ref=e272] [cursor=pointer]
+      - row "#276 90262 completed 56 1" [ref=e273]:
+        - cell "#276" [ref=e274]
+        - cell "90262" [ref=e275]
+        - cell "completed" [ref=e276]
+        - cell "56" [ref=e277]
+        - cell "1" [ref=e278]
+        - cell [ref=e279]
+        - cell [ref=e280]
+      - row "#277 91664 needs_review — 1 Review" [ref=e281]:
+        - cell "#277" [ref=e282]
+        - cell "91664" [ref=e283]
+        - cell "needs_review" [ref=e284]
+        - cell "—" [ref=e285]
+        - cell "1" [ref=e286]
+        - cell [ref=e287]
+        - cell "Review" [ref=e288]:
+          - button "Review" [ref=e289] [cursor=pointer]
+      - row "#278 90402 needs_review — 1 Review" [ref=e290]:
+        - cell "#278" [ref=e291]
+        - cell "90402" [ref=e292]
+        - cell "needs_review" [ref=e293]
+        - cell "—" [ref=e294]
+        - cell "1" [ref=e295]
+        - cell [ref=e296]
+        - cell "Review" [ref=e297]:
+          - button "Review" [ref=e298] [cursor=pointer]
+      - row "#279 90140 needs_review — 1 Review" [ref=e299]:
+        - cell "#279" [ref=e300]
+        - cell "90140" [ref=e301]
+        - cell "needs_review" [ref=e302]
+        - cell "—" [ref=e303]
+        - cell "1" [ref=e304]
+        - cell [ref=e305]
+        - cell "Review" [ref=e306]:
+          - button "Review" [ref=e307] [cursor=pointer]
+      - row "#280 91025 needs_review — 1 Review" [ref=e308]:
+        - cell "#280" [ref=e309]
+        - cell "91025" [ref=e310]
+        - cell "needs_review" [ref=e311]
+        - cell "—" [ref=e312]
+        - cell "1" [ref=e313]
+        - cell [ref=e314]
+        - cell "Review" [ref=e315]:
+          - button "Review" [ref=e316] [cursor=pointer]
+      - row "#281 91249 completed 48 1" [ref=e317]:
+        - cell "#281" [ref=e318]
+        - cell "91249" [ref=e319]
+        - cell "completed" [ref=e320]
+        - cell "48" [ref=e321]
+        - cell "1" [ref=e322]
+        - cell [ref=e323]
+        - cell [ref=e324]
+      - row "#282 90263 needs_review — 1 Review" [ref=e325]:
+        - cell "#282" [ref=e326]
+        - cell "90263" [ref=e327]
+        - cell "needs_review" [ref=e328]
+        - cell "—" [ref=e329]
+        - cell "1" [ref=e330]
+        - cell [ref=e331]
+        - cell "Review" [ref=e332]:
+          - button "Review" [ref=e333] [cursor=pointer]
+      - row "#283 91443 needs_review — 1 Review" [ref=e334]:
+        - cell "#283" [ref=e335]
+        - cell "91443" [ref=e336]
+        - cell "needs_review" [ref=e337]
+        - cell "—" [ref=e338]
+        - cell "1" [ref=e339]
+        - cell [ref=e340]
+        - cell "Review" [ref=e341]:
+          - button "Review" [ref=e342] [cursor=pointer]
+      - row "#284 90325 needs_review — 1 Review" [ref=e343]:
+        - cell "#284" [ref=e344]
+        - cell "90325" [ref=e345]
+        - cell "needs_review" [ref=e346]
+        - cell "—" [ref=e347]
+        - cell "1" [ref=e348]
+        - cell [ref=e349]
+        - cell "Review" [ref=e350]:
+          - button "Review" [ref=e351] [cursor=pointer]
+      - row "#285 90415 needs_review — 1 Review" [ref=e352]:
+        - cell "#285" [ref=e353]
+        - cell "90415" [ref=e354]
+        - cell "needs_review" [ref=e355]
+        - cell "—" [ref=e356]
+        - cell "1" [ref=e357]
+        - cell [ref=e358]
+        - cell "Review" [ref=e359]:
+          - button "Review" [ref=e360] [cursor=pointer]
+      - row "#286 90175 needs_review — 1 Review" [ref=e361]:
+        - cell "#286" [ref=e362]
+        - cell "90175" [ref=e363]
+        - cell "needs_review" [ref=e364]
+        - cell "—" [ref=e365]
+        - cell "1" [ref=e366]
+        - cell [ref=e367]
+        - cell "Review" [ref=e368]:
+          - button "Review" [ref=e369] [cursor=pointer]
+      - row "#287 90170 needs_review — 1 Review" [ref=e370]:
+        - cell "#287" [ref=e371]
+        - cell "90170" [ref=e372]
+        - cell "needs_review" [ref=e373]
+        - cell "—" [ref=e374]
+        - cell "1" [ref=e375]
+        - cell [ref=e376]
+        - cell "Review" [ref=e377]:
+          - button "Review" [ref=e378] [cursor=pointer]
+  - link "Download results CSV" [active] [ref=e379] [cursor=pointer]:
+    - /url: /api/v1/batches/7/results.csv
+```

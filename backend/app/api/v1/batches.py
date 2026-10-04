@@ -16,6 +16,12 @@ from app.services.uploads import UploadValidationError, quick_validate_upload
 router = APIRouter(tags=["batches"])
 
 
+def safe_upload_filename(filename: str | None) -> str | None:
+    if not filename:
+        return None
+    return filename.replace("\\", "/").rsplit("/", 1)[-1] or None
+
+
 def get_exam_or_404(exam_id: int, db: Session) -> Exam:
     exam = db.query(Exam).filter(Exam.id == exam_id).first()
     if exam is None:
@@ -104,6 +110,7 @@ async def upload_sheet_item(batch_id: int, file: UploadFile = File(...), db: Ses
     except UploadValidationError as e:
         item = BatchItem(
             batch_id=batch_id,
+            filename=safe_upload_filename(file.filename),
             status="failed",
             error_code=e.code,
             error_message=str(e),
@@ -120,7 +127,7 @@ async def upload_sheet_item(batch_id: int, file: UploadFile = File(...), db: Ses
 
     item = BatchItem(
         batch_id=batch_id,
-        filename=None,
+        filename=safe_upload_filename(file.filename),
         storage_key=storage_key,
         status="queued",
         stage=None,
@@ -171,6 +178,7 @@ async def retry_item(
     batch.failed_count -= 1
 
     item.storage_key = storage_key
+    item.filename = safe_upload_filename(file.filename)
     item.status = "queued"
     item.stage = None
     item.progress = 0

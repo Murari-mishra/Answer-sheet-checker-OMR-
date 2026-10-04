@@ -1,0 +1,15 @@
+{
+  "images": {
+    "Page0014.jpg": {"expected_roll_number": "91314"},
+    "Page0015.jpg": {"expected_roll_number": "91301"},
+    "Page0019.jpg": {"expected_roll_number": "90450"},
+    "Page0023.jpg": {"expected_roll_number": "90486"},
+    "Page0024.jpg": {"expected_roll_number": "90414"},
+    "Page0027.jpg": {"expected_roll_number": "90695"},
+    "Page0030.jpg": {"expected_roll_number": "90262"},
+    "Page0031.jpg": {"expected_roll_number": "91664"},
+    "Page0032.jpg": {"expected_roll_number": "90402"},
+    "Page0039.jpg": {"expected_roll_number": "90415"},
+    "Page0040.jpg": {"expected_roll_number": "90175"}
+  }
+}

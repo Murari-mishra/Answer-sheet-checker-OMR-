@@ -33,6 +33,7 @@ class ReviewSubmit(BaseModel):
 class BatchItemOut(BaseModel):
     id: int
     batch_id: int
+    filename: str | None
     status: str
     stage: str | None
     progress: int

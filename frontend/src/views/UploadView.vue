@@ -21,7 +21,7 @@ onMounted(() => {
 
 const csvUrl = computed(() => {
   const batch = store.currentBatch
-  return batch ? `http://127.0.0.1:8000/api/v1/batches/${batch.id}/results.csv` : ''
+  return batch ? `/api/v1/batches/${batch.id}/results.csv` : ''
 })
 
 const showCsvLink = computed(() => {
@@ -45,7 +45,7 @@ function openKeyEditor() {
 
 async function createExamWithKey(answerKey: { question: number; correct_option: string }[]) {
   try {
-    const exam = await fetch('http://127.0.0.1:8000/api/v1/exams', {
+    const exam = await fetch('/api/v1/exams', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

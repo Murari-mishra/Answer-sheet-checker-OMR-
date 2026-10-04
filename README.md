@@ -436,6 +436,23 @@ cd /home/murari/tracks/omr/frontend
 npm run build
 ```
 
+### Full Stack Fixture QA
+The fixture runner uses the production alignment, bubble-reading, and scoring functions. Add verified expected roll numbers and (when available) expected scores to `backend/tests/fixtures/sheets/expected.json`; entries without labels are reported as unverified. The Playwright run uploads the fixture images through the UI and checks the API results and CSV.
+
+Start the complete application with one command:
+
+```bash
+docker compose up --build
+```
+
+Run the full fixture QA suite with one command. This starts any missing app dependencies and leaves the app services running after Playwright exits:
+
+```bash
+docker compose up --build -d && docker compose --profile qa run --build --rm qa
+```
+
+The QA command writes `backend/generated/fixture_qa_report.json` for direct CV execution and `backend/generated/qa/full_stack_qa_report.json` for the browser/API/worker/CSV run. Playwright HTML, screenshots, and traces are written under `backend/generated/qa/`. A non-zero exit code means an image or verified expectation failed; reports are still written for review. Until the official answer key is added to the fixture manifest, browser-run scores use a synthetic all-A key and are explicitly marked unverified.
+
 ---
 
 ## 📚 Documentation Index
@@ -443,3 +460,13 @@ npm run build
 For in-depth architectural specifications and complete API contracts, consult:
 - **[System Architecture & CV Pipeline Deep Dive](docs/ARCHITECTURE.md)**: Mathematical formulas, contour filtering algorithms, Hough transforms, and queue concurrency models.
 - **[Complete REST API Reference](docs/API_REFERENCE.md)**: Full endpoint reference with curl examples, request/response models, and error codes.
+
+
+
+Simplest: start everything and run automation
+Run from the project root:
+docker compose up --build -d && docker compose --profile qa run --build --rm qa
+
+
+to show the QA report
+npx playwright show-report ../backend/generated/qa/html

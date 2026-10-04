@@ -1,0 +1,10 @@
+FROM mcr.microsoft.com/playwright:v1.56.1-noble
+
+WORKDIR /workspace/frontend
+
+COPY frontend/package*.json ./
+RUN npm ci --legacy-peer-deps
+
+COPY frontend ./
+
+CMD ["npx", "playwright", "test"]

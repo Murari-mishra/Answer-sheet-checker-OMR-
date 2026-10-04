@@ -29,6 +29,7 @@ export interface Batch {
 export interface BatchItem {
   id: number
   batch_id: number
+  filename: string | null
   status: ItemStatus
   stage: string | null
   progress: number
